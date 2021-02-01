@@ -7,13 +7,13 @@ jobs:
   build:
     executor: android/android
 
+    working_directory: /tmp
     steps:
       - checkout
       - run:
           command: ./gradlew build
 
-    working_directory: /tmp
-    steps:
+
       -run:
         name: Creating Artifacts
         command:
