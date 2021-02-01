@@ -1,6 +1,3 @@
-general:
-    artifacts:
-        - /home/ubuntu/ci-cd-android/app/build/outputs/apk/
 
 version: 2.1
 
@@ -15,6 +12,9 @@ jobs:
       - checkout
       - run:
           command: ./gradlew build
+      - store_artifacts:
+          path: app/build/outputs/apk/
+          destination: apks/
 
 
     
