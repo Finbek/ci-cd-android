@@ -1,3 +1,7 @@
+general:
+    artifacts:
+        - /home/ubuntu/ci-cd-android/app/build/outputs/apk/
+
 version: 2.1
 
 orbs:
@@ -11,9 +15,6 @@ jobs:
       - checkout
       - run:
           command: ./gradlew build
-      - store_artifacts:
-          name: Creating Apk
-          path: bin/final_build
 
 
     
