@@ -23,7 +23,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setupRecyclerView()
         setupViewModel()
-        AppCenter.start(application, "2b63652c-9f20-4b51-9340-9f09c964bd7a", Analytics::class.java, Crashes::class.java)
+        AppCenter.start(application,
+                "1c90129f-e8a0-4f36-bf70-689568fdb636",
+                Analytics::class.java,
+                Crashes::class.java)
     }
 
     private fun setupRecyclerView() {
