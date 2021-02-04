@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.microsoft.appcenter.analytics.Analytics
 
 
 class MovieListAdapter(
@@ -44,6 +45,7 @@ class MovieListAdapter(
                 .centerCrop()
                 .into(image)
             button.setOnClickListener { _ ->
+                Analytics.trackEvent("Crash Button Selected");
                 throw NullPointerException()
             }
         }
